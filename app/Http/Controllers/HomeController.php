@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $client = new \GuzzleHttp\Client();
         $res = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id='.env('FB_APP_ID').'&client_secret='.env('FB_APP_SECRET').'&grant_type=client_credentials');
         $obj = json_decode($res);
           

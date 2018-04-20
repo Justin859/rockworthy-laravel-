@@ -15,9 +15,22 @@
                     @endif
 
                     You are logged in!
+                    {{$obj->access_token}}
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- <div id="macy-conatiner">
+    <div class="child-element">
+        
+    </div>
+</div> -->
+
+<div id="macy-conatiner">
+    <div class="child-element">
+        
     </div>
 </div>
 @endsection

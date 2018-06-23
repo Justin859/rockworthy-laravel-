@@ -36,7 +36,7 @@ class HomeController extends Controller
           try {
             // Get the \Facebook\GraphNodes\GraphUser object for the current user.
             // If you provided a 'default_access_token', the '{access-token}' is optional.
-            $response = $fb->get('/143477955718812', $obj->access_token);
+            $response = $fb->get('/143477955718812/events', $obj->access_token)->getGraphEdge();
           } catch(\Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
             echo 'Graph returned an error: ' . $e->getMessage();
@@ -47,10 +47,10 @@ class HomeController extends Controller
             exit;
           }
           
-          $me = $response->getGraphUser();
+          //$me = $response->getGraphUser();
           // echo 'Logged in as ' . $me->getName();
 
-          return view('home', compact('obj'));
+          return view('home', compact('response'));
  
     }
 }

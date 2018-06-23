@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    {{$obj->access_token}}
+                    {{ $response }}
                 </div>
             </div>
         </div>

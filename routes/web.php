@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('/admin', 'AdminController@dashboard');
+
+// Subscription payment routes
+Route::post('/checkout-subscription', 'SubscriptionController@post_subscription');
+Route::get('/checkout-subscription', 'SubscriptionController@checkout_subscription');

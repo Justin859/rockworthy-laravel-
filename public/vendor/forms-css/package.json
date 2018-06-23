@@ -1,0 +1,19 @@
+{
+  "name": "forms-css",
+  "version": "1.0.0",
+  "description": "Simple and Pure CSS for forms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoquinalha/forms-css.git"
+  },
+  "author": "gustavoquinalha<gusquinalha@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavoquinalha/forms-css/issues"
+  },
+  "homepage": "https://github.com/gustavoquinalha/forms-css#readme"
+}

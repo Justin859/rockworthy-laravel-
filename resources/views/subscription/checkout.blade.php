@@ -4,33 +4,35 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-10">
         
-            <h1>Subscribe to channel</h1>
-            <h4>{{$getString}}</h4>
+            <h1>Purchase Subscription</h1>
+            <hr />
                 <form action="/checkout-subscription" method="POST">
                 {{ csrf_field() }}
-                    <input type="hidden" name="merchant_id" value="{{$data['merchant_id']}}">
-                    <input type="hidden" name="merchant_key" value="{{$data['merchant_key']}}">
-                    <input type="hidden" name="return_url" value="{{$data['return_url']}}">
-                    <input type="hidden" name="cancel_url" value="{{$data['cancel_url']}}">
-                    <input type="hidden" name="notify_url" value="{{$data['notify_url']}}">
-                    <input type="hidden" name="name_first" value="{{$data['name_first']}}">
-                    <input type="hidden" name="name_last" value="{{$data['name_last']}}">
-                    <input type="hidden" name="email_address" value="{{$data['email_address']}}">
-                    <input type="hidden" name="email_confirmation" value="{{$data['email_confirmation']}}">
-                    <input type="hidden" name="confirmation_address" value="{{$data['confirmation_address']}}">
-                    <input type="hidden" name="payment_method" value="{{$data['payment_method']}}">
-                    <input type="hidden" name="subscription_type" value="{{$data['subscription_type']}}">
-                    <input type="hidden" name="billing_date" value="{{$data['billing_date']}}">
-                    <input type="hidden" name="amount" value="{{$data['amount']}}">
-                    <input type="hidden" name="recurring_amount" value="{{$data['recurring_amount']}}">
-                    <input type="hidden" name="frequency" value="{{$data['frequency']}}">
-                    <input type="hidden" name="cycles" value="{{$data['cycles']}}">
-                    <input type="hidden" name="item_name" value="{{$data['item_name']}}">
-                    <input type="hidden" name="item_description" value="{{$data['item_description']}}">
-                    <input type="hidden" name="signature" value="{{$data['signature']}}">
-                    <input type="submit" value="Pay Now" />
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label container-w3" for="inlineRadio1">Single Channel Subscription <span class="badge badge-warning">R30.00</span>
+                        <input class="form-check-input" checked="checked" type="radio" name="subscription_type" id="inlineRadio1" value="single_channel" />
+                        <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label container-w3" for="inlineRadio2">Full Access Subscription <span class="badge badge-warning">R60.00</span>
+                        <input class="form-check-input" type="radio" name="subscription_type" id="inlineRadio2" value="full_access" />
+                        <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="form-group row" id="select_channel">
+                        <label class="col-sm-2 col-form-label" for="custom_str2">Channel</label>
+                        <div class="col-sm-10">
+                        <select type="hidden" class="form-control" name="custom_str2">
+                            <option value="13">Fast Fusion Old Parks</option>
+                        </select>  
+                        </div>
+                    </div>
+                        <div class="d-flex justify-content-end">
+                            <input type="submit" class="btn btn-danger" value="Pay Now" />
+                        </div>
                 </form>
         </div>
     </div>

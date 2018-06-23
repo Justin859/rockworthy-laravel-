@@ -14,7 +14,70 @@
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+    <style>
+  /* Customize the label (the container) */
+  .container-w3 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
+  /* Hide the browser's default radio button */
+  .container-w3 input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container-w3:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container-w3 input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container-w3 input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container-w3 .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -71,5 +134,18 @@
     <script src="{{ asset('vendor/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/bower_components/macy/dist/macy.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('input[type=radio][name=subscription_type]').change(function() {
+          if (this.value == 'single_channel') {
+              $('#select_channel').show();
+          }
+          else if (this.value == 'full_access') {
+              $('#select_channel').hide();
+          }
+      });
+    });
+    </script>
 </body>
 </html>

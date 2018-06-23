@@ -123,8 +123,24 @@ class SubscriptionController extends Controller
 
     public function notify(Request $request)
     {
+        if($request->payment_status = 'COMPLETE')
+        {
+            $new_subscribed_user = \App\SubscribedUser::create([
+                'user_id' => Auth::user()->id(),
+                'pf_payment_id' => $request->pf_payment_id,
+                'payment_status' => $request->payment_status,
+                'item_name' => $request->item_name,
+                'amount_gross' => $request->amount_gross,
+                'amount_fee' => $request->amount_fee,
+                'amount_net' => $request->amount_net,
+                'token' => $request->token,
+                'signature' => $request->signature
+            ]);
 
-        return response(200);
+            return response(200);   
+        } else {
+            return response(500);
+        }
         
     }
 

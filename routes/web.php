@@ -23,3 +23,5 @@ Route::get('/checkout-subscription', 'SubscriptionController@checkout_subscripti
 
 Route::get('/subscription/success', 'SubscriptionController@success');
 Route::get('/subscription/cancel', 'SubscriptionController@cancel');
+
+Route::get('/subscription/notify', 'SubscriptionController@notify');

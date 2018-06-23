@@ -21,10 +21,9 @@ class SubscriptionController extends Controller
             // Merchant details
             'merchant_id' => '10009086',
             'merchant_key' => '0k4ypwayi3j1m',
-            'return_url' => 'https://mighty-everglades-22117.herokuapp.com/successfull_subscription',
-            'cancel_url' => 'https://mighty-everglades-22117.herokuapp.com/cancelled_subscription',
-            'notify_url' => 'https://mighty-everglades-22117.herokuapp.com/notify_subscription',
-            // Buyer details
+            'return_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/success',
+            'cancel_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/cancel',
+            'notify_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/notify',            // Buyer details
             'name_first' => $user->firstname,
             'name_last'  => $user->surname,
             'email_address'=> $user->email,
@@ -77,9 +76,9 @@ class SubscriptionController extends Controller
             // Merchant details
             'merchant_id' => '10009086',
             'merchant_key' => '0k4ypwayi3j1m',
-            'return_url' => 'http://www.paperclipsa.co.za/successfull_subscription',
-            'cancel_url' => 'http://www.paperclipsa.co.za/cancelled_subscription',
-            'notify_url' => 'http://www.paperclipsa.co.za/notify_subscription',
+            'return_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/success',
+            'cancel_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/cancel',
+            'notify_url' => 'https://mighty-everglades-22117.herokuapp.com/subscription/notify',
             // Buyer details
             'name_first' => $user->firstname,
             'name_last'  => $user->surname,

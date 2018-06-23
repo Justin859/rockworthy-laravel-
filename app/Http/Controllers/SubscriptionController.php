@@ -136,12 +136,10 @@ class SubscriptionController extends Controller
                 'token' => $request->token,
                 'signature' => $request->signature
             ]);
-
-            return response(200);   
-        } else {
-            return response(500);
         }
-        
+
+        return response(200);   
+
     }
 
     public function success() 

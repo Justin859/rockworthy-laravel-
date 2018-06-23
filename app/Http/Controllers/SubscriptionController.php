@@ -124,7 +124,7 @@ class SubscriptionController extends Controller
     public function notify(Request $request)
     {
 
-        return response()->setStatusCode(200);
+        return response(200);
         
     }
 

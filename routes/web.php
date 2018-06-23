@@ -20,3 +20,6 @@ Route::get('/admin', 'AdminController@dashboard');
 // Subscription payment routes
 Route::post('/checkout-subscription', 'SubscriptionController@post_subscription');
 Route::get('/checkout-subscription', 'SubscriptionController@checkout_subscription');
+
+Route::get('/subscription/success', 'SubscriptionController@success');
+Route::get('/subscription/cancel', 'SubscriptionController@cancel');

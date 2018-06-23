@@ -9,7 +9,7 @@
             <h1>Subscribe to channel</h1>
             <h4>{{$getString}}</h4>
                 <form action="/checkout-subscription" method="POST">
-                @csrf
+                {{ csrf_field() }}
                     <input type="hidden" name="merchant_id" value="{{$data['merchant_id']}}">
                     <input type="hidden" name="merchant_key" value="{{$data['merchant_key']}}">
                     <input type="hidden" name="return_url" value="{{$data['return_url']}}">

@@ -13,6 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
-        'subscription/notify/*',
+        'subscription/notify',
     ];
 }

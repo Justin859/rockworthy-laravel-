@@ -126,7 +126,7 @@ class SubscriptionController extends Controller
         if($request->payment_status = 'COMPLETE')
         {
             $new_subscribed_user = \App\SubscribedUser::create([
-                'user_id' => Auth::user()->id(),
+                'user_id' => '1',
                 'pf_payment_id' => $request->pf_payment_id,
                 'payment_status' => $request->payment_status,
                 'item_name' => $request->item_name,
